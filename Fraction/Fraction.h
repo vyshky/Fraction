@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 
 using namespace std;
@@ -6,7 +6,7 @@ using namespace std;
 using std::cin;
 using std::cout;
 using std::endl;
-
+ 
 #define tab "\t"
 
 class Fraction
@@ -44,7 +44,7 @@ public:
 	Fraction operator--(int);
 
 	//				Type cast operators:
-	explicit operator int()const;	//explicit - явный
+	explicit operator int()const;	//explicit - СЏРІРЅС‹Р№
 	operator double()const;
 	operator char()const;
 
@@ -69,4 +69,4 @@ bool operator>(Fraction left, Fraction right);
 bool operator<(Fraction left, Fraction right);
 /*-------------------------------------------------------------*/
 ostream& operator<<(ostream& os, const Fraction& obj);
-istream& operator>>(istream& is, Fraction& obj); //есть вопросы , нужно доработать
+istream& operator>>(istream& is, Fraction& obj); //РµСЃС‚СЊ РІРѕРїСЂРѕСЃС‹ , РЅСѓР¶РЅРѕ РґРѕСЂР°Р±РѕС‚Р°С‚СЊ

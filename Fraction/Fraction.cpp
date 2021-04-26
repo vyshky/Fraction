@@ -1,4 +1,4 @@
-#include "Fraction.h"
+ï»¿#include "Fraction.h"
 
 
 int Fraction::get_integer() const
@@ -29,7 +29,7 @@ void Fraction::set_denominator(int x)
 	/*if (x > 0)this->denominator = x;
 	else if(x<0) this->denominator = -x;
 	else this->denominator = 1;*/
-	if (x == 0)throw exception("Zero in denominator");	//Áðîñàåì èñêëþ÷åíèå, ñ ñîîáùåíèå îá îøèáêå
+	if (x == 0)throw exception("Zero in denominator");	//Ð‘Ñ€Ð¾ÑÐ°ÐµÐ¼ Ð¸ÑÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ, Ñ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ Ð¾Ð± Ð¾ÑˆÐ¸Ð±ÐºÐµ
 	this->denominator = x;
 }
 /*--------------------------------*/
@@ -159,7 +159,7 @@ Fraction Fraction::operator--(int)
 }
 
 //				Type cast operators:
-Fraction::operator int()const	//explicit - ÿâíûé
+Fraction::operator int()const	//explicit - ÑÐ²Ð½Ñ‹Ð¹
 {
 	return integer;
 }
@@ -315,7 +315,7 @@ bool operator>(Fraction left, Fraction right)
 	return left.get_numerator() > right.get_numerator();
 }
 bool operator<(Fraction left, Fraction right)
-{
+{ 
 	left.to_improper();
 	right.to_improper();
 	left.set_numerator(left.get_numerator() * right.get_denominator());
@@ -336,14 +336,14 @@ ostream& operator<<(ostream& os, const Fraction& obj)
 	return os;
 
 }
-istream& operator>>(istream& is, Fraction& obj) //åñòü âîïðîñû , íóæíî äîðàáîòàòü
+istream& operator>>(istream& is, Fraction& obj) //ÐµÑÑ‚ÑŒ Ð²Ð¾Ð¿Ñ€Ð¾ÑÑ‹ , Ð½ÑƒÐ¶Ð½Ð¾ Ð´Ð¾Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ñ‚ÑŒ
 {
 	int x, y;
 	char c;
 	is >> x >> c >> y;
 	while (c != '/')
 	{
-		cout << "Ââåäèòå êîððåêòíîå çíà÷åíèå: "; is >> x >> c >> y;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: "; is >> x >> c >> y;
 	}
 	obj.set_integer(0);
 	obj.set_numerator(x);
